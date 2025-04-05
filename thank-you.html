@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #0f0f1a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      padding: 2rem;
+    }
+    h1 {
+      color: #00fffc;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #fc00ff;
+      text-decoration: none;
+      border: 1px solid #fc00ff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      background: #fc00ff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thank You! 🎉</h1>
+    <p>Your message has been sent successfully. I'll get back to you soon!</p>
+    <p><a href="index.html">← Return Home</a></p>
+    
+    <!-- Optional: Show dynamic name if passed in URL -->
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const name = urlParams.get('name');
+      if (name) {
+        document.querySelector('h1').textContent += `, ${name}!`;
+      }
+    </script>
+  </div>
+</body>
+</html>
